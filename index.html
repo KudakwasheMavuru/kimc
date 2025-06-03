@@ -65,6 +65,20 @@
       <!-- ============================================-->
       <!-- End of Preloader ===========================-->
 
+      <script>
+        (function () {
+          function hidePreloader() {
+            var pre = document.getElementById('preloader');
+            if (pre) {
+              pre.style.display = 'none';
+            }
+          }
+          document.addEventListener('DOMContentLoaded', hidePreloader);
+          window.addEventListener('load', hidePreloader);
+          setTimeout(hidePreloader, 5000);
+        })();
+      </script>
+
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="p-0" id="home">
