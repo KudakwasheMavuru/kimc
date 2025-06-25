@@ -3922,7 +3922,7 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-    <script src="assets/js/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/plugins.js"></script>
@@ -3931,8 +3931,8 @@
     <script src="assets/js/stickyfill.min.js"></script>
     <script src="assets/lib/remodal/remodal.js"></script>
     <script src="assets/lib/jtap/jquery.tap.js"></script>
-    <script src="../../www.google.com/recaptcha/api.js"></script>
-    <script src="../../cdn.polyfill.io/v2/polyfill.min85ed.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"></script> -->
     <script src="assets/lib/owl.carousel/owl.carousel.js"></script>
     <script src="assets/lib/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/lib/isotope-packery/packery-mode.pkgd.min.js"></script>
@@ -3945,6 +3945,23 @@
     <script src="assets/js/theme.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw&amp;callback=initMap" async></script>
+    <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.transition = "opacity 0.5s ease";
+      preloader.style.opacity = "0";
+      preloader.style.pointerEvents = "none";
+      setTimeout(() => {
+        preloader.style.display = "none";
+        console.log("✅ Preloader hidden.");
+      }, 600); // Wait for fade-out to complete
+    } else {
+      console.warn("⚠️ Preloader not found.");
+    }
+  });
+</script>
+
   </body>
 
 </html>
