@@ -4434,8 +4434,10 @@
  <!-- ===============================================-->
  <!-- JavaScripts-->
  <!-- ===============================================-->
- <script src="assets/js/jquery.min.js"></script>
- <script src="assets/js/popper.min.js"></script>
+ <!-- jQuery 3.7.1 from CDN (replaces obfuscated local copy that crashes in production) -->
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+ <!-- Popper 1.x from CDN (Bootstrap 4 requires v1, not v2) -->
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
  <script src="assets/js/bootstrap.js"></script>
  <script src="assets/js/plugins.js"></script>
  <script src="assets/lib/prismjs/prism.js"></script>
@@ -4443,7 +4445,7 @@
  <script src="assets/js/stickyfill.min.js"></script>
  <script src="assets/lib/remodal/remodal.js"></script>
  <script src="assets/lib/jtap/jquery.tap.js"></script>
- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6%2CArray.prototype.includes%2CCustomEvent%2CObject.entries%2CObject.values%2CURL"></script>
+ <!-- polyfill.io removed: domain was acquired by bad actors in 2024, cert invalid -->
  <script src="assets/lib/owl.carousel/owl.carousel.js"></script>
  <script src="assets/lib/isotope-layout/isotope.pkgd.min.js"></script>
  <script src="assets/lib/isotope-packery/packery-mode.pkgd.min.js"></script>
